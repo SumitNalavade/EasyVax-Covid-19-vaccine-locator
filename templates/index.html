@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>COVAX - Home</title>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bigcontainer {
+            width: 100vw;
+            max-width: 95%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            background-color: beige;
+        }
+
+        .smallcontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin: 1em 1em;
+
+            border: 5px solid black;
+
+            width: 33%
+        }
+
+        .img {
+            max-width: 400px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="/send" method="POST">
+            <label for="location">Location</label>
+            <input type="text" placeholder="Enter your location" id="location" name="location">
+            <button>Submit</button>
+        </form>
+        <div class="bigcontainer">
+            {%if address_array%}
+            {% for i in range(address_array|length) %}
+            <div class="smallcontainer">
+                <img src={{photo_ref_array[i]}} class = "img"/>
+                <h2>{{ name_array[i] }}</h2>
+                <p>{{ address_array[i] }}</p>
+            </div>
+            {%endfor%}
+            {%endif%}
+        </div>
+    </main>
+</body>
+
+</html>
