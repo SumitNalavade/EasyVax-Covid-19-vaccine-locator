@@ -23,7 +23,7 @@ def send():
 
         response = map_client.places(query=home_location)
 
-        for i in range(len(response["results"])):
+        for i in range(6):
             latitude = response['results'][0]['geometry']['location']['lat']
             longitude = response['results'][0]['geometry']['location']['lng']
 
@@ -33,11 +33,11 @@ def send():
         address_array = []
         photo_ref_array = []
 
-        for i in range(len(response["results"])):
+        for i in range(6):
             name_array.append((response["results"][i]["name"]))
             address_array.append((response["results"][i]["formatted_address"]))
 
-        for i in range(len(response["results"])):
+        for i in range(6):
             try:
                 photo_ref = ((response["results"][i]["photos"][0]['photo_reference']))
                 img_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photo_ref}&sensor=false&key=AIzaSyDVKqdtzC0GmyYJBcjLCpbea_BMZ58lo4k"
