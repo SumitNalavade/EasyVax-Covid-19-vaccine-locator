@@ -23,6 +23,8 @@ main {
     font-size: 2.25em;
 
     margin-bottom: 8%;
+
+    max-width: 95%;
 }
 
 form {
@@ -108,6 +110,8 @@ img {
 
     input {
         margin-bottom: 5em;
+
+        border: 1px solid white;
     }
 
     .logoimg {
