@@ -13,7 +13,11 @@ def home_page():
 @app.route('/send', methods=['POST'])
 def send():
     if(request.method == 'POST'):
-        home_location = request.form['location']
+        streetaddress = request.form['streetaddress']
+        city = request.form['city']
+        state = request.form['state']
+
+        home_location = streetaddress + ", " + city + ", " + state
 
         API_KEY = "AIzaSyDVKqdtzC0GmyYJBcjLCpbea_BMZ58lo4k"
 

@@ -2,6 +2,8 @@ body {
     background: linear-gradient(90deg, rgba(58,12,163,1) 0%, rgba(114,9,183,1) 62%, rgba(181,23,158,1) 100%); 
 
     width: 100vw;
+
+    min-height: 100vh;
 }
 
 main {
@@ -32,9 +34,21 @@ main {
 form {
     display: flex;
     flex-direction: column;
-
     align-self: center;
+    align-items: center;
 
+}
+
+.additionalsearch {
+    display: flex;
+    justify-content: space-between;
+
+    height: auto;
+}
+
+.additionalsearch input {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .inputLabel {
@@ -44,10 +58,11 @@ form {
     margin-left: 1em;
 
     text-align: start;
+    align-self: flex-start;
 }
 
 input {
-    width: 70vw;
+    width: 15vw;
 
     border: 3px solid white;
     border-radius: 25px;
@@ -55,6 +70,14 @@ input {
     opacity: 0.7;
 
     margin-bottom: 10em;
+
+    min-width: 150px;
+}
+
+#streetaddress {
+    width: 70vw;
+
+    margin-bottom: 2em;
 }
 
 .bigcontainer {
@@ -92,6 +115,15 @@ img {
     justify-content: space-around;
 }
 
+button {
+    background: none;
+    border: none;
+
+    color: white;
+
+    height: 25%;
+}
+
 @media (max-width: 767px) {
     body {
         background: linear-gradient(rgba(58,12,163,1) 0%, rgba(181,23,158,1) 100%); 
@@ -109,12 +141,26 @@ img {
     }
 
     input {
-        margin-bottom: 5em;
+        margin-bottom: 2em;
 
         border: 1px solid white;
+
+        width: 70vw;
+    }
+
+    .inputLabel {
+        margin-left: 2.25em;
     }
 
     .logoimg {
         width: 100%;
+    }
+
+    .additionalsearch {
+        flex-direction: column;
+    }
+
+    button {
+        display: none;
     }
 }
