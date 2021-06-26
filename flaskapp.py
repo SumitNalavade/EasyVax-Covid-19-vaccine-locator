@@ -31,13 +31,14 @@ def send():
 
         name_array = []
         address_array = []
-        photo_ref_array = []
+        photo_ref_array = []  
+        phone_numbers_array = []
+        website_array = []
 
         for i in range(6):
             name_array.append((response["results"][i]["name"]))
             address_array.append((response["results"][i]["formatted_address"]))
 
-        for i in range(6):
             try:
                 photo_ref = ((response["results"][i]["photos"][0]['photo_reference']))
                 img_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photo_ref}&sensor=false&key=AIzaSyDVKqdtzC0GmyYJBcjLCpbea_BMZ58lo4k"
@@ -46,4 +47,18 @@ def send():
                 photo_ref_array.append("https://149362684.v2.pressablecdn.com/wp-content/uploads/COVID-Vaccine-Graphic.png")
 
 
-        return(render_template('index.html', address_array=address_array, name_array=name_array, photo_ref_array=photo_ref_array))
+        for i in range(6):
+            my_place_id = response['results'][i]['place_id']
+            my_fields = ['formatted_phone_number', 'website']
+
+            phone_numbers_array.append((map_client.place(place_id=my_place_id, fields=my_fields))['result']['formatted_phone_number'])
+
+            try:
+                website_array.append((map_client.place(place_id=my_place_id, fields=my_fields))['result']['website'])
+            except:
+                "https://covvax.herokuapp.com/"
+
+    
+        return(render_template('index.html', address_array=address_array, name_array=name_array, photo_ref_array=photo_ref_array, phone_numbers_array=phone_numbers_array, website_array=website_array))
+
+

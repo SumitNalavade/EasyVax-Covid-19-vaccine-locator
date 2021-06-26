@@ -1,0 +1,114 @@
+body {
+    background: rgb(58,12,163);
+    background: linear-gradient(90deg, rgba(58,12,163,1) 0%, rgba(114,9,183,1) 62%, rgba(181,23,158,1) 100%); 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logoimg {
+    width: 45%;
+}
+
+.description {
+    color: white;
+    font-weight: 300;
+    font-size: 2.25em;
+
+    margin-bottom: 8%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+
+}
+
+.inputLabel {
+    color: white;
+    font-weight: 500;
+
+    margin-left: 1em;
+
+    text-align: start;
+}
+
+input {
+    width: 70vw;
+
+    border: 3px solid white;
+    border-radius: 25px;
+
+    opacity: 0.7;
+
+    margin-bottom: 10em;
+}
+
+.bigcontainer {
+    width: 100vw;
+    max-width: 85%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    min-width: 25%;
+    max-width: 25%;
+
+    margin: 1em 0.25em;
+
+    max-height: 500px;
+
+    border-radius: 5% !important;
+
+    border: 3px solid white !important;
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+    border-radius: 5% !important;
+}
+
+.card-group {
+    justify-content: space-around;
+}
+
+@media (max-width: 767px) {
+    body {
+        background: linear-gradient(rgba(58,12,163,1) 0%, rgba(181,23,158,1) 100%); 
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card {
+        max-width: 95%;
+    }
+
+    input {
+        margin-bottom: 5em;
+    }
+
+    .logoimg {
+        width: 100%;
+    }
+}
