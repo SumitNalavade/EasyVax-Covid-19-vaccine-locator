@@ -6,7 +6,7 @@ This project was created for submission to the Citro Hacks hackathon by Sumit Na
 
 Technologies Used: Python (Flask), HTML, CSS, Google Places API
 
-Website ---> https://covvax.herokuapp.com/
+Website ---> https://easyvax.herokuapp.com/
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
