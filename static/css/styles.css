@@ -41,7 +41,8 @@ form {
 
 .additionalsearch {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
     height: auto;
 }
@@ -115,13 +116,20 @@ img {
     justify-content: space-around;
 }
 
-button {
+.magnifyicon {
     background: none;
     border: none;
 
     color: white;
+}
 
-    height: 25%;
+.searchbutton {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 30px;
+    width: 33%;
+
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -160,7 +168,7 @@ button {
         flex-direction: column;
     }
 
-    button {
-        display: none;
+    .searchbutton {
+        display: initial;
     }
 }
