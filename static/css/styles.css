@@ -91,6 +91,9 @@ img {
 @media (max-width: 767px) {
     body {
         background: linear-gradient(rgba(58,12,163,1) 0%, rgba(181,23,158,1) 100%); 
+
+        width: 100vw;
+        height: 100vh;
     }
 
     .card-group {
