@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(90deg, rgba(58,12,163,1) 0%, rgba(114,9,183,1) 62%, rgba(181,23,158,1) 100%); 
+    background: linear-gradient(rgba(58,12,163,1) 0%, rgba(114,9,183,1) 62%, rgba(181,23,158,1) 100%); 
 
     min-height: 100vh;
 }
@@ -8,7 +8,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     text-align: center;
 
@@ -71,6 +71,10 @@ input {
     margin-bottom: 10em;
 
     min-width: 150px;
+
+    padding: 0.5em;
+    
+    padding-left: 1em;
 }
 
 #streetaddress {
@@ -85,6 +89,8 @@ input {
 
     display: flex;
     flex-wrap: wrap;
+
+    margin-bottom: 3em;
 }
 
 .card {
@@ -130,12 +136,14 @@ img {
     display: none;
 }
 
+.magnify {
+    border: none;
+    background: none;
+
+    color: white;
+}
+
 @media (max-width: 767px) {
-    body {
-        background: linear-gradient(rgba(58,12,163,1) 0%, rgba(181,23,158,1) 100%); 
-
-    }
-
     .card-group {
         display: flex;
         flex-direction: column;
@@ -168,5 +176,9 @@ img {
 
     .searchbutton {
         display: initial;
+    }
+
+    .magnify {
+        display: none;
     }
 }
