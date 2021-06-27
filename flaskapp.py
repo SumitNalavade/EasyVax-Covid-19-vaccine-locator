@@ -20,7 +20,7 @@ def send():
         home_location = f'{streetaddress}, {city}, {state}'
 
         #Removed API for GitHub (Add in your own key here)
-        API_KEY = ""
+        API_KEY = "AIzaSyDVKqdtzC0GmyYJBcjLCpbea_BMZ58lo4k"
 
         map_client = googlemaps.Client(API_KEY)
 
