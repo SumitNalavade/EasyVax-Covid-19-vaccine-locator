@@ -13,11 +13,7 @@ def home_page():
 @app.route('/send', methods=['POST'])
 def send():
     if(request.method == 'POST'):
-        streetaddress = request.form['streetaddress']
-        city = request.form['city']
-        state = request.form['state']
-
-        home_location = f'{streetaddress}, {city}, {state}'
+        address = request.form['address']
 
         #Removed API for GitHub (Add in your own key here)
         API_KEY = "AIzaSyDVKqdtzC0GmyYJBcjLCpbea_BMZ58lo4k"
@@ -26,7 +22,7 @@ def send():
 
         location_name = "COVID-19 Vaccine"
 
-        response = map_client.places(query=home_location)
+        response = map_client.places(query=address)
 
         for i in range(6):
             latitude = response['results'][0]['geometry']['location']['lat']
