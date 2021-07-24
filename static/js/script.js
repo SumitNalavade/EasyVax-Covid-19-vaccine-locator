@@ -7,4 +7,9 @@ function openLinkOnImageClick() {
     }
 }
 
+function goToHomeOnLogoClick() {
+    document.querySelector(".logoimg").addEventListener("click", () => window.location.href = "https://easyvax.herokuapp.com/")
+}
+
 openLinkOnImageClick();
+goToHomeOnLogoClick();
