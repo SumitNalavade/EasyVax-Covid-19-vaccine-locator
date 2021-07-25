@@ -3,12 +3,12 @@ function openLinkOnImageClick() {
     document.querySelectorAll(".card-text a").forEach((site) => sitesArr.push(site));
 
     for(let i = 0; i < sitesArr.length; i++) {
-        document.querySelectorAll(".card-img-top")[i].addEventListener("click", () => location.assign(sitesArr[i]));
+        document.querySelectorAll(".card-img-top")[i].addEventListener("click", () => window.location.assign(sitesArr[i]));
     }
 }
 
 function goToHomeOnLogoClick() {
-    document.querySelector(".logoimg").addEventListener("click", () => location.assign("https://easyvax.herokuapp.com/"))
+    document.querySelector(".logoimg").addEventListener("click", () => window.location.assign("https://easyvax.herokuapp.com"));
 }
 
 openLinkOnImageClick();
