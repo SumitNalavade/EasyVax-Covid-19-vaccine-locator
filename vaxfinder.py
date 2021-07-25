@@ -59,7 +59,7 @@ def find(address):
                 'result']['website']
         except:
             # If website is not present, use stock url
-            website = "https://covvax.herokuapp.com/"
+            website = "https://easyvax.herokuapp.com/"
 
         # Create location type objects using the following paramers and add it to an array of location objects
         location_array.append(
